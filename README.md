@@ -50,6 +50,7 @@
   - [ ] 第三各板块的两个 stories 各做一个 .html页面 包含详细描述（需要头像 动态背景 类似的字体 paragraph可通过lorem随机生成）
   - [ ] About Us
   - [ ] Offer
+  - [ ] database 数据处理
 
 - 项目的技术难点
   - 难点...
