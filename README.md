@@ -46,8 +46,10 @@
   | 庞鹏瞩 |                             |   100%   |
 
 - 待实现内容
-  - [ ]
-  - [] 
+  - [ ] The most Popular Tours 中的三个 Tour 各做一个 .html页面 包含详细描述
+  - [ ] 第三各板块的两个 stories 各做一个 .html页面 包含详细描述（需要头像 动态背景 类似的字体 paragraph可通过lorem随机生成）
+  - [ ] About Us
+  - [ ] Offer
 
 - 项目的技术难点
   - 难点...
