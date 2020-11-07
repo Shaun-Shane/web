@@ -187,7 +187,7 @@ html {
 .header {
     width: 100%;
     height: calc(100vh - 7rem);
-    background: linear-gradient(rgba(18, 113, 255, .5), rgba(18, 133, 255, .3))
+    background: linear-gradient(rgba(18, 113, 255, .33), rgba(18, 133, 255, .13))
     , url(../images/header-bg.jpg) center no-repeat;
     background-size: cover;
     perspective: 100rem;
@@ -204,11 +204,19 @@ html {
     color: var(--white-color);
 }
 
-.header-paragraph {
+.header-paragraph1 {
     font-size: 3rem;
     font-weight: 500;
     color: var(--secondary-color);
     max-width: 70rem;
+    margin: auto;
+}
+
+.header-paragraph2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    max-width: 60rem;
     margin: auto;
 }
 
