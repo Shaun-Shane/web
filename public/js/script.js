@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const tp = document.querySelector('.top');
 
 const colors = ["#6495ed", "#7fffd4", "#ffa07a", "#f08080", "#afeeee"];
 
@@ -19,13 +20,18 @@ Array.from(document.querySelectorAll(".navigation-button")).forEach(item => {
 });
 
 document.querySelector('.open-navbar-icon').addEventListener('click', ()=>{
-    container.classList.add('change');
+    tp.classList.add('change');
 });
 
 document.querySelector('.close-navbar-icon').addEventListener('click', ()=>{
-    container.classList.remove('change');
+    tp.classList.remove('change');
 });
 
+Array.from(document.getElementsByName('nav-link')).forEach(item => {
+    item.onclick = () => {
+      tp.classList.remove('change');
+    }
+})
 
 $("a").click(function () {
     $("html, body").animate({

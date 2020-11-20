@@ -13,8 +13,7 @@
 </head>
 
 <body>
-  <div id="Home" class="top"></div>
-  <div class="container">
+  <div id="Top" class="top">
     <!--Navbar-->
     <div class="open-navbar-icon navbar-icon center">
       <div class="line"></div>
@@ -28,23 +27,25 @@
           <div class="line line-2"></div>
         </div>
         <div class="nav-list">
-          <a href="#Home" class="nav-link center">Home</a>
-          <a href="#Tours" class="nav-link center">Tours</a>
-          <a href="#Home" class="nav-link center">About Us</a>
-          <a href="#Home" class="nav-link center">Offer</a>
-          <a href="#Contact" class="nav-link center">Contact</a>
+          <a href="#Home" class="nav-link center" name="nav-link">Home</a>
+          <a href="#Tours" class="nav-link center" name="nav-link">Tours</a>
+          <a href="#Home" class="nav-link center" name="nav-link">About Us</a>
+          <a href="#Home" class="nav-link center" name="nav-link">Offer</a>
+          <a href="#Contact" class="nav-link center" name="nav-link">Contact</a>
         </div>
       </nav>
     </div>
-
+  </div>
+  <!--Container-->
+  <div class="container">
     <!--Nav to top-->
-    <a href="#Home" class="nav-to-top-icon navbar-icon center">
+    <a href="#Top" class="nav-to-top-icon navbar-icon center">
       <div class="to-top-arrow"></div>
     </a>
     <!--End of Navbar-->
 
     <!--Header-->
-    <header class="header center">
+    <header id="Home" class="header center">
       <div class="header-text">
         <h1 class="heading">Around the world</h1>
         <p class="header-paragraph1">"Traveling - 
@@ -236,23 +237,22 @@
       </form>
     </section>
     <!--End of contact-->
-
-    <!--footer-->
-    <footer class="footer">
-      <div class="footer-list">
-        <a href="#Home" class="footer-link">Home</a>
-        <a href="#Tours" class="footer-link">Tours</a>
-        <a href="#Home" class="footer-link">About Us</a>
-        <a href="#Home" class="footer-link">Offer</a>
-        <a href="#Contact" class="footer-link">Contact</a>
-      </div>
-      <p class="footer-paragraph">
-        Copyright &copy; ShaunAndShane All Rights Reserved
-      </p>
-    </footer>
-    <!--End of footer-->
   </div>
   <!--End of container-->
+  <!--footer-->
+  <footer class="footer">
+    <div class="footer-list">
+      <a href="#Home" class="footer-link">Home</a>
+      <a href="#Tours" class="footer-link">Tours</a>
+      <a href="#Home" class="footer-link">About Us</a>
+      <a href="#Home" class="footer-link">Offer</a>
+      <a href="#Contact" class="footer-link">Contact</a>
+    </div>
+    <p class="footer-paragraph">
+      Copyright &copy; ShaunAndShane All Rights Reserved
+    </p>
+  </footer>
+  <!--End of footer-->
   <script src="js/script.js"></script>
 </body>
 
