@@ -18,6 +18,14 @@
     padding: 5rem;
 }
 
+.sign-form h1 {
+    color: var(--grey-color);
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
 .sign-input-group {
     width: 100%;
     display: flex;
