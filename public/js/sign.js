@@ -1,7 +1,7 @@
 document.getElementById("Back").addEventListener('click', () => {
   var url = window.localStorage.getItem("sign-btn");
+  console.log(url);
   location.href = url;
-  //console.log(url);
   //window.history.back();
 })
 
