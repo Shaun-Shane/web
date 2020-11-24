@@ -1,4 +1,5 @@
 /*Common styles*/
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +15,7 @@ html {
 }
 
 :root {
-    --primary-color:#2b81e4;
+    --primary-color: #2b81e4;
     --secondary-color: #eee;
     --white-color: #fff;
     --grey-color: #555;
@@ -33,9 +34,11 @@ html {
     box-shadow: 0.5rem 1rem 2rem var(--grey-color);
     overflow: hidden;
 }
+
 /*End of common styles*/
 
 /*top*/
+
 .top {
     height: 4.9rem;
     box-shadow: 0 0.3rem 1rem var(--grey-color);
@@ -50,6 +53,7 @@ html {
     display: flex;
     justify-content: flex-end;
     margin-right: 2rem;
+
 }
 
 .sign-link {
@@ -70,9 +74,36 @@ html {
 .sign-link:hover {
     background-color: var(--secondary-color);
 }
+
+.back-icon {
+    display: flex;
+    margin-left: 3rem;
+    position: fixed;
+}
+
+.back-link {
+    height: 3.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    color: var(--light-grey-color);
+    flex-direction: row;
+    margin: 1rem 2rem;
+    border: none;
+    padding: 0.6rem;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+    transition: background-color 0.8s;
+}
+
+.back-link:hover {
+    background-color: var(--secondary-color);
+}
+
 /*End of top*/
 
 /*navbar*/
+
 .navbar-icon {
     width: 4rem;
     height: 4rem;
@@ -103,20 +134,15 @@ html {
 }
 
 /*nav to top*/
+
 .to-top-arrow {
     position: fixed;
     border-bottom: 1.3rem solid var(--light-grey-color);
     border-left: 0.6rem solid transparent;
     border-right: 0.6rem solid transparent;
 }
-/*end of nav to top*/
 
-.open-navbar-icon {
-    position: absolute;
-    top: 0.3rem;
-    left: 3.8rem;
-    z-index: 200;
-}
+/*end of nav to top*/
 
 .close-navbar-icon {
     position: absolute;
@@ -152,7 +178,6 @@ html {
     opacity: .8;
     position: relative;
     top: -100%;
-
     transition: all .3s;
 }
 
@@ -187,9 +212,9 @@ html {
 
 .navbar {
     width: 100%;
-    height: 98.3%; /*设置nav-list的高度*/
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .3)), 
-    url(../images/navbar-bg.jpg) center no-repeat;
+    height: 98.3%;
+    /*设置nav-list的高度*/
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .3)), url(../images/navbar-bg.jpg) center no-repeat;
     background-size: cover;
     top: 1.8rem;
     position: relative;
@@ -218,14 +243,15 @@ html {
     opacity: 1;
     transition: bottom .5s, opacity .2s .25s;
 }
+
 /*End of navbar*/
 
 /*Header*/
+
 .header {
     width: 100%;
     height: calc(100vh - 7rem);
-    background: linear-gradient(rgba(18, 113, 255, .33), rgba(18, 133, 255, .13))
-    , url(../images/header-bg.jpg) center no-repeat;
+    background: linear-gradient(rgba(18, 113, 255, .33), rgba(18, 133, 255, .13)), url(../images/header-bg.jpg) center no-repeat;
     background-size: cover;
     perspective: 100rem;
 }
@@ -352,9 +378,11 @@ html {
         opacity: 1;
     }
 }
+
 /*End of header*/
 
 /*Popular tours*/
+
 .popular-tours {
     padding: 5rem 0 10rem 0;
 }
@@ -370,7 +398,6 @@ html {
 .cards-wrapper {
     display: flex;
     justify-content: space-evenly;
-
 }
 
 .card {
@@ -394,7 +421,7 @@ html {
     transition: opacity .4s, transform 0.4s, box-shadow .4s;
 }
 
-.change > .front-side {
+.change>.front-side {
     transform: translateZ(-5rem) translateX(3rem);
     box-shadow: 0 2rem 4rem #777;
     opacity: .5;
@@ -422,7 +449,7 @@ html {
     font-size: 1.6rem;
     font-weight: 500;
     color: var(--light-grey-color);
-    margin: 2rem 0 ;
+    margin: 2rem 0;
     border-bottom: .1rem solid var(--primary-color);
     padding-bottom: 1.5rem;
 }
@@ -441,7 +468,7 @@ html {
     transition: opacity .4s, transform .4s, box-shadow .4s;
 }
 
-.change > .back-side {
+.change>.back-side {
     transform: translateZ(0) translateX(0);
     box-shadow: 0 0.5rem 2rem #aaa;
     opacity: .9;
@@ -480,9 +507,11 @@ html {
     letter-spacing: .2rem;
     cursor: pointer;
 }
+
 /*End of popular tours*/
 
 /*Stories*/
+
 .stories {
     padding: 10rem 0;
     position: relative;
@@ -550,9 +579,11 @@ html {
 .story-paragraph::first-letter {
     margin-left: 1rem;
 }
+
 /*End of Stories*/
 
 /*Contact*/
+
 .contact {
     padding: 15rem 0 20rem 0;
     text-align: center;
@@ -600,8 +631,7 @@ html {
     width: 48.5%;
 }
 
-.input-group input,
-.input-group textarea {
+.input-group input, .input-group textarea {
     padding: 3rem 1rem 1rem;
     background-color: var(--secondary-color);
     border: .1rem solid var(--secondary-color);
@@ -612,8 +642,7 @@ html {
     transition: border .3s;
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
+.input-group input:focus, .input-group textarea:focus {
     border: .1rem solid #ccc;
 }
 
@@ -670,9 +699,11 @@ html {
         background-color: #3d3d3d3d;
     }
 }
+
 /*End of Contact*/
 
 /*footer*/
+
 .footer {
     background-color: var(--grey-color);
     padding: 4rem 0 2rem 0;
@@ -706,18 +737,18 @@ html {
     letter-spacing: .2rem;
     margin-top: 1.5rem;
 }
+
 /*End of footer*/
 
 @media (max-width: 1200px) {
     .cards-wrapper {
         flex-direction: column;
-        align-items: center;;
+        align-items: center;
+        ;
     }
-
     .card {
         margin: 3rem 0;
     }
-
     .story-bg {
         width: 85%;
     }
@@ -726,13 +757,10 @@ html {
 @media (max-width: 1000px) {
     .nav-list {
         flex-direction: column;
-
     }
-
     .nav-link {
         flex-grow: 1;
     }
-
     .header-text {
         position: absolute;
         top: 50%;
@@ -740,33 +768,26 @@ html {
         transform: translate(-50%, -50%);
         z-index: 10;
     }
-
     .heading {
         font-size: 6rem;
     }
-
     .header-paragraph {
         font-size: 2.5rem;
     }
-
     .popular-tours-heading {
         font-size: 6rem;
     }
-
     .story-bg {
         transform: skewX(0);
     }
-
     .story {
         transform: skew(0);
         flex-direction: column;
         align-items: center;
     }
-
     .story-image {
         margin-bottom: 3rem;
     }
-
     .footer-link {
         padding: .3rem 2rem;
         margin: 0 1rem;
@@ -777,20 +798,16 @@ html {
     .header-paragraph {
         display: none;
     }
-
     .popular-tours-heading {
         font-size: 5rem;
     }
-
     .contact-form {
         width: 90%;
     }
-
     .footer-list {
         flex-direction: column;
         align-items: center;
     }
-
     .footer-link {
         margin: 1rem 0;
     }
@@ -800,28 +817,22 @@ html {
     .container {
         margin: 0;
     }
-
     .open-navbar-icon {
         top: 2.5rem;
         left: 2.5rem;
     }
-
     .navbar-wrapper {
         padding: 0;
     }
-
     .close-navbar-icon {
         right: 4rem;
     }
-
     .header {
         height: 100vh;
     }
-
     .contact-heading {
         font-size: 6rem;
     }
-
     .contact-form {
         padding: 2rem;
         height: 40rem;
@@ -830,6 +841,6 @@ html {
 
 @media (max-width: 500px) {
     html {
-        font-size: 45%; 
+        font-size: 45%;
     }
 }
