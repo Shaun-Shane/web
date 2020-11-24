@@ -99,7 +99,7 @@ html {
     position: fixed;
     bottom: 2.5rem;
     right: 4.5rem;
-    z-index: 200;
+    z-index: 100;
 }
 
 /*nav to top*/
@@ -123,6 +123,11 @@ html {
     top: 2.5rem;
     right: 3rem;
     z-index: 300;
+    animation: transform .1s;
+}
+
+.close-navbar-icon:hover {
+    transform: rotate(-180deg);
 }
 
 .close-navbar-icon .line {
