@@ -53,7 +53,6 @@ html {
     display: flex;
     justify-content: flex-end;
     margin-right: 2rem;
-
 }
 
 .sign-link {
@@ -579,6 +578,7 @@ html {
 .story-paragraph::first-letter {
     margin-left: 1rem;
 }
+
 
 /*End of Stories*/
 
