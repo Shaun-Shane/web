@@ -531,6 +531,11 @@ html {
     width: 70%;
     box-shadow: 0 2rem 5rem rgba(51, 51, 51, .4);
     transform: skewX(20deg);
+    transition: 0.3s;
+}
+.story-bg:hover{
+    transform: translate(-10px,-20px) skewX(20deg);
+    box-shadow: 0 2rem 5rem rgba(51, 51, 51, .5);
 }
 
 .story-image {
