@@ -319,6 +319,7 @@ h1, h2, h3, h4, h5, h6 {
   zoom: 1;
   *display: inline;
 }
+
 .fh5co-social li a span {
   display: -moz-inline-stack;
   display: inline-block;
@@ -495,8 +496,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 .fh5co-check li:before {
-  font-family: 'icomoon';
-  speak: none;
+
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -567,5 +567,3 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 2em;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

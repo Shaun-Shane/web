@@ -1,0 +1,362 @@
+/*Common styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Vollkorn', serif;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --primary-color: #2b81e4;
+    --secondary-color: #eee;
+    --white-color: #fff;
+    --grey-color: #555;
+    --light-grey-color: #777;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*End of common styles*/
+
+/*top*/
+
+.top {
+    height: 4.9rem;
+    box-shadow: 0 0.3rem 1rem var(--grey-color);
+    z-index: 200;
+    background-color: var(--white-color);
+    position: sticky;
+    top: 0;
+    border-bottom: 0.2rem solid var(--light-grey-color);
+}
+
+.sign-list {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.sign-link {
+    height: 3.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    color: var(--light-grey-color);
+    flex-direction: row;
+    margin: 1rem 2rem;
+    border: none;
+    padding: 0.6rem;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+    transition: background-color 0.8s;
+}
+
+.sign-link:hover {
+    background-color: var(--secondary-color);
+}
+
+.back-icon {
+    display: flex;
+    margin-left: 3rem;
+    position: fixed;
+}
+
+.back-link {
+    height: 3.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    color: var(--light-grey-color);
+    flex-direction: row;
+    margin: 1rem 2rem;
+    border: none;
+    padding: 0.6rem;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+    transition: background-color 0.8s;
+}
+
+.back-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/*End of top*/
+
+/*navbar*/
+
+.navbar-icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    flex-direction: column;
+    transition: all 0.8s;
+}
+
+.navbar-icon:hover {
+    background-color: var(--secondary-color);
+}
+
+.navbar-icon .line {
+    height: .32rem;
+    width: 2.7rem;
+    background-color: var(--light-grey-color);
+}
+
+.nav-to-top-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 4.5rem;
+    z-index: 200;
+}
+
+/*nav to top*/
+
+.to-top-arrow {
+    position: fixed;
+    border-bottom: 1.3rem solid var(--light-grey-color);
+    border-left: 0.6rem solid transparent;
+    border-right: 0.6rem solid transparent;
+}
+
+/*end of nav to top*/
+
+
+/*Stories*/
+
+.stories {
+    padding: 10rem 0;
+    position: relative;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stories-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story-bg {
+    background-color: rgba(238, 238, 238, .85);
+    padding: 5rem;
+    margin: 5rem;
+    width: 70%;
+    box-shadow: 0 2rem 5rem rgba(51, 51, 51, .4);
+    transform: skewX(20deg);
+    transition: 0.3s;
+}
+.story-bg:hover{
+    transform: translate(-10px,-20px) skewX(20deg);
+    box-shadow: 0 2rem 5rem rgba(51, 51, 51, .5);
+}
+
+
+.story-image {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5rem;
+}
+
+.story {
+    transform: skewX(-20deg);
+    display: flex;
+}
+
+.story-text {
+    letter-spacing: .1rem;
+}
+
+.story-heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--grey-color);
+    margin-bottom: 1rem;
+}
+
+.story-paragraph {
+    font-size: 1.8rem;
+    color: var(--light-grey-color);
+}
+
+.story-paragraph::first-letter {
+    margin-left: 1rem;
+}
+
+
+/*End of Stories*/
+
+/*footer*/
+
+.footer {
+    background-color: var(--grey-color);
+    padding: 4rem 0 2rem 0;
+    opacity: 0.95;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-link {
+    font-size: 2rem;
+    color: var(--white-color);
+    margin: 0 6rem;
+    background-color: var(--grey-color);
+    padding: .3rem 3rem;
+    letter-spacing: .3rem;
+    transition: all .2s;
+}
+
+.footer-link:hover {
+    transform: rotate(-10deg);
+    box-shadow: 0 2rem 3rem #000;
+}
+
+.footer-paragraph {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    letter-spacing: .2rem;
+    margin-top: 1.5rem;
+}
+
+/*End of footer*/
+
+@media (max-width: 1200px) {
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+        ;
+    }
+    .card {
+        margin: 3rem 0;
+    }
+    .story-bg {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .nav-list {
+        flex-direction: column;
+    }
+    .nav-link {
+        flex-grow: 1;
+    }
+    .header-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+    .heading {
+        font-size: 6rem;
+    }
+    .header-paragraph {
+        font-size: 2.5rem;
+    }
+    .popular-tours-heading {
+        font-size: 6rem;
+    }
+    .story-bg {
+        transform: skewX(0);
+    }
+    .story {
+        transform: skew(0);
+        flex-direction: column;
+        align-items: center;
+    }
+    .story-image {
+        margin-bottom: 3rem;
+    }
+    .footer-link {
+        padding: .3rem 2rem;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .header-paragraph {
+        display: none;
+    }
+    .popular-tours-heading {
+        font-size: 5rem;
+    }
+    .contact-form {
+        width: 90%;
+    }
+    .footer-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-link {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        margin: 0;
+    }
+    .open-navbar-icon {
+        top: 2.5rem;
+        left: 2.5rem;
+    }
+    .navbar-wrapper {
+        padding: 0;
+    }
+    .close-navbar-icon {
+        right: 4rem;
+    }
+    .header {
+        height: 100vh;
+    }
+    .contact-heading {
+        font-size: 6rem;
+    }
+    .contact-form {
+        padding: 2rem;
+        height: 40rem;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 45%;
+    }
+}
