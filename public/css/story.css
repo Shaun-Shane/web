@@ -78,6 +78,7 @@ html {
     display: flex;
     margin-left: 3rem;
     position: fixed;
+    cursor: pointer;
 }
 
 .back-link {

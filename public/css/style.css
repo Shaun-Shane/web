@@ -578,9 +578,12 @@ html {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5rem;
-    color: var(--white-color);
     text-shadow: 0 1rem 2rem #000;
     margin-top: 3rem;
+}
+
+.story-link a{
+    color: var(--white-color);
 }
 
 /*End of Stories*/
@@ -819,10 +822,6 @@ html {
 @media (max-width: 650px) {
     .container {
         margin: 0;
-    }
-    .open-navbar-icon {
-        top: 2.5rem;
-        left: 2.5rem;
     }
     .navbar-wrapper {
         padding: 0;
