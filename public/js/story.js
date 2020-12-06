@@ -14,6 +14,8 @@ async function checkLogIn() {
     let result = await res.json();
     alert(result.msg); //session invalid
     location.href = '/';
+  } else { //user is logged in
+    document.getElementById("user-account-btn").innerHTML = userInfo.user.username;
   }
 }
 checkLogIn();
@@ -44,6 +46,13 @@ Array.from(document.querySelectorAll(".back-link")).forEach(item => {
     location.href = '/';
   }
 });
+
+document.getElementById("log-out-btn").onclick = () => {
+  var userInfo = JSON.parse(localStorage.getItem('userInfo'));
+  userInfo.token = "invalid"; //making token malformed
+  localStorage.setItem('userInfo', JSON.stringify(userInfo));
+  location.href = '/'; //back to home page
+}
 
 $("a").click(function () {
   $("html, body").animate({
