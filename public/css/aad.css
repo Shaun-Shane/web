@@ -1,3 +1,308 @@
+/*Common styles*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Vollkorn', serif;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-color: #2b81e4;
+  --secondary-color: #eee;
+  --white-color: #fff;
+  --grey-color: #555;
+  --light-grey-color: #777;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+
+  box-shadow: 0.5rem 1rem 2rem var(--grey-color);
+  overflow: hidden;
+}
+
+/*End of common styles*/
+
+/*top*/
+
+.top {
+  height: 4.9rem;
+  box-shadow: 0 0.3rem 1rem var(--grey-color);
+  z-index: 200;
+  background-color: var(--white-color);
+  position: sticky;
+  top: 0;
+  border-bottom: 0.2rem solid var(--light-grey-color);
+}
+
+.sign-list {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+
+.sign-link {
+  height: 3.5rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  color: var(--light-grey-color);
+  flex-direction: row;
+  margin: 1rem 2rem;
+  border: none;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  border-radius: 1.5rem;
+  transition: background-color 0.8s;
+}
+
+.sign-link:hover {
+  background-color: var(--secondary-color);
+}
+
+/*End of top*/
+
+/*navbar*/
+
+.navbar-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  cursor: pointer;
+  flex-direction: column;
+  transition: all 0.8s;
+}
+
+.navbar-icon:hover {
+  background-color: var(--secondary-color);
+}
+
+.navbar-icon .line {
+  height: .32rem;
+  width: 2.7rem;
+  background-color: var(--light-grey-color);
+}
+
+.nav-to-top-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 4.5rem;
+  z-index: 100;
+}
+
+/*nav to top*/
+
+.to-top-arrow {
+  position: fixed;
+  border-bottom: 1.3rem solid var(--light-grey-color);
+  border-left: 0.6rem solid transparent;
+  border-right: 0.6rem solid transparent;
+}
+
+/*end of nav to top*/
+
+.open-navbar-icon {
+  position: absolute;
+  top: 0.3rem;
+  left: 3.8rem;
+  z-index: 200;
+}
+
+.close-navbar-icon {
+  position: absolute;
+  top: 2.5rem;
+  right: 3rem;
+  z-index: 300;
+  animation: transform .1s;
+}
+
+.close-navbar-icon:hover {
+  transform: rotate(-180deg);
+}
+
+.close-navbar-icon .line {
+  position: absolute;
+}
+
+.line-1 {
+  transform: rotate(40deg);
+}
+
+.line-2 {
+  transform: rotate(-40deg);
+}
+
+.nav-list {
+  height: 100%;
+  display: flex;
+}
+
+.nav-link {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white-color);
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+  position: relative;
+  top: -100%;
+  transition: all .3s;
+}
+
+.change .nav-link {
+  top: 0;
+}
+
+.change .nav-link:nth-child(1) {
+  transition: top 1s .4s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(2) {
+  transition: top 1s .6s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(3) {
+  transition: top 1s .8s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(4) {
+  transition: top 1s 1.0s, opacity .3s, color .3s;
+}
+
+.change .nav-link:nth-child(5) {
+  transition: top 1s 1.2s, opacity .3s, color .3s;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.navbar {
+  width: 100%;
+  height: 98.3%;
+  /*设置nav-list的高度*/
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .3)), url(../images/navbar-bg.jpg) center no-repeat;
+  background-size: cover;
+  top: 1.8rem;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.open-navbar-icon .line {
+  margin: .3rem 0;
+}
+
+.navbar-wrapper {
+  width: 100vw;
+  height: 102vh;
+  background-color: rgba(255, 255, 255, .7);
+  position: fixed;
+  left: 0;
+  bottom: -100%;
+  opacity: 0;
+  z-index: 300;
+  padding: 3.5rem 5.5rem 3.5rem 3.5rem;
+  transition: bottom .5s, opacity .2s;
+}
+
+.change .navbar-wrapper {
+  bottom: -1.0rem;
+  opacity: 1;
+  transition: bottom .5s, opacity .2s .25s;
+}
+
+/*End of navbar*/
+
+/*Header*/
+
+.header {
+  width: 100%;
+  height: calc(100vh - 7rem);
+  background: linear-gradient(rgba(18, 113, 255, .33), rgba(18, 133, 255, .13)), url(../images/header-bg.jpg) center no-repeat;
+  background-size: cover;
+  perspective: 100rem;
+}
+
+.header-text {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.heading {
+  font-size: 8rem;
+  color: var(--white-color);
+}
+
+.header-paragraph1 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  max-width: 70rem;
+  margin: auto;
+}
+
+.header-paragraph2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+  max-width: 60rem;
+  margin: auto;
+}
+
+.logo {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+}
+
+.logo h1 {
+  display: flex;
+}
+
+.logo h1 span {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  background-color: var(--white-color);
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0.5rem;
+  border-radius: 50%;
+}
+
+.logo h1 span:nth-child(1) {
+  animation: drop-letters 5s .1s infinite;
+}
+
+.logo h1 span:nth-child(2) {
+  animation: drop-letters 5s .2s infinite;
+}
+
+.logo h1 span:nth-child(3) {
+  animation: drop-letters 5s .3s infinite;
+}
+
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
