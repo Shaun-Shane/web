@@ -2,7 +2,7 @@ async function checkLogIn() {
   var userInfo = JSON.parse(localStorage.getItem('userInfo'));
   //userInfo.token = "invalid"; //for test, making token malformed
   if (userInfo) console.log(userInfo.token);
-  let res = await fetch('/pay', {
+  let res = await fetch('/booking', {
     method: "GET",
     mode: "cors",
     redirect: "follow",
@@ -27,5 +27,4 @@ if (document.getElementById("Back")) {
     //window.history.back();
   })
 }
-document.getElementById("pic").innerHTML='/images/air-balloon.png';
 

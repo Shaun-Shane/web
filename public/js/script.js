@@ -1,3 +1,28 @@
+function changeTop(username) { //登陆后修改顶部
+  var signInLink = document.getElementById("sign-in-link");
+  var signUpLink = document.getElementById("sign-up-link");
+  document.getElementById("sign-list").removeChild(signInLink);
+  document.getElementById("sign-list").removeChild(signUpLink);
+
+  var userAccount = document.createElement("div");
+  userAccount.className = "sign-link";
+  userAccount.id = "user-account-btn";
+  userAccount.innerHTML = username;
+  document.getElementById("sign-list").appendChild(userAccount);
+
+  var logOut = document.createElement("div");
+  logOut.className = "sign-link";
+  logOut.id = "log-out-btn";
+  logOut.innerHTML = "Log Out";
+  logOut.addEventListener('click', () => {
+    var userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    userInfo.token = "invalid"; //making token malformed
+    localStorage.setItem('userInfo', JSON.stringify(userInfo));
+    location.href = '/'; //back to home page
+  })
+  document.getElementById("sign-list").appendChild(logOut);
+}
+
 async function checkLogIn() {
   var userInfo = JSON.parse(localStorage.getItem('userInfo'));
   //userInfo.token = "invalid"; //for test, making token malformed
@@ -12,9 +37,9 @@ async function checkLogIn() {
   });
   console.log(res.msg);
   if (res.status == 401) { //for users not logged in
-    let result = await res.json();
-    alert(result.msg); //session invalid
-  }
+    // let result = await res.json();
+    // alert(result.msg); //session invalid
+  } else if (res.status == 200) changeTop(userInfo.user.username);
 }
 checkLogIn();
 

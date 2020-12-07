@@ -22,9 +22,9 @@ router.get('/sign-in', (req, res) => {
   res.sendFile(__dirname + '/view/sign-in.html')
 });
 
-router.get('/pay', userMiddleware.isLoggedIn,(req, res) => {
-  if (req.userData) console.log(req.userData);
-  res.sendFile(__dirname + '/view/pay.html')
+router.get('/booking', userMiddleware.isLoggedIn,(req, res) => {
+  //if (typeof req.headers.authorization == "undefined") res.send(emptyFile);
+  res.sendFile(__dirname + '/view/booking.html')
 });
 
 router.get('/story', userMiddleware.isLoggedIn, (req, res, next) => {
