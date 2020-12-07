@@ -22,6 +22,11 @@ router.get('/sign-in', (req, res) => {
   res.sendFile(__dirname + '/view/sign-in.html')
 });
 
+router.get('/pay', userMiddleware.isLoggedIn,(req, res) => {
+  if (req.userData) console.log(req.userData);
+  res.sendFile(__dirname + '/view/pay.html')
+});
+
 router.get('/story', userMiddleware.isLoggedIn, (req, res, next) => {
   if (req.userData) console.log(req.userData);
   res.sendFile(__dirname + '/view/story.html')
