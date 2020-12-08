@@ -594,10 +594,15 @@ html {
     letter-spacing: .5rem;
     text-shadow: 0 1rem 2rem #000;
     margin-top: 3rem;
+    transition: text-shadow .5s;
 }
 
 .story-link a {
     color: var(--white-color);
+}
+
+.story-link:hover {
+    text-shadow: 0 1rem 1rem #000;
 }
 
 

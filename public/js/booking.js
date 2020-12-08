@@ -23,6 +23,9 @@ async function checkLogIn() {
     if (res.status == 401) { //for users not logged in
         let result = await res.json();
         sessionInvalidAlert(result.msg);
+    } else if (res.status == 200) {
+        //show img
+        document.getElementById("booking-img").style.cssText = "opacity: 1.0";
     }
 }
 checkLogIn();

@@ -1,4 +1,5 @@
 /*booking*/
+
 .booking {
     padding: 15rem 0 20rem 0;
     text-align: center;
@@ -30,6 +31,7 @@
 .booking-form img {
     margin-bottom: 2rem;
     transition: 0.2s;
+    opacity: 0;
 }
 
 .booking-form img:hover {
@@ -47,4 +49,6 @@
 .booking-form-btn:hover {
     background-color: var(--grey-color);
 }
+
+
 /*booking*/
