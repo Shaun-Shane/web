@@ -10,7 +10,7 @@ if (document.getElementById("Back")) {
 function signUpAlert(result, res) {
     swal({
         title: `${result.msg}`,
-        icon: `${res.status == 201 ? "success" : "warning"}`,
+        icon: `${res.status == 201 ? "success" : (res.status == 400 ? "warning" : "error")}`,
     }).then(function() {
         if (result.url) window.location.href = result.url;
     });
@@ -44,7 +44,7 @@ if (document.getElementById("sign-up-form")) {
 function signInAlert(result, res) {
     swal({
         title: `${result.msg}`,
-        icon: `${res.status == 200 ? "success" : "warning"}`,
+        icon: `${res.status == 200 ? "success" : "error"}`,
     }).then(function() {
         if (res.status != 200) return; //is not logged in
         let url = window.localStorage.getItem("sign-btn");
