@@ -33,9 +33,8 @@ router.get('/story', userMiddleware.isLoggedIn, (req, res, next) => {
 });
 
 router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
-    db.get(
-        `SELECT * FROM ${MYSQL_USER_TABLE} WHERE LOWER(username) = LOWER('${req.body.username}');`,
-        (err, result) => {
+    db.prepare(`SELECT * FROM ${MYSQL_USER_TABLE} WHERE LOWER(username) = LOWER(?);`)
+        .get([req.body.username], (err, result) => {
             console.log(result);
             if (result != undefined) {
                 console.log('This username is already in use!');
@@ -51,9 +50,8 @@ router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
                         });
                     } else {
                         // has hashed pw => add to database
-                        db.run(
-                            `INSERT INTO ${MYSQL_USER_TABLE} (id, username, password, registered) 
-                            VALUES ('${uuid.v4()}', '${req.body.username}', '${hash}', date('now'))`,
+                        db.prepare(`INSERT INTO ${MYSQL_USER_TABLE} (id, username, password, registered) 
+                        VALUES (?, ?, ?, ?)`).run([uuid.v4(), req.body.username, hash, new Date().toLocaleString()],
                             (err, result) => {
                                 if (err) {
                                     throw err;
@@ -71,14 +69,12 @@ router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
                     }
                 });
             }
-        }
-    );
+        });
 });
 
 router.post('/sign-in', (req, res, next) => {
-    db.get(
-        `SELECT * FROM ${MYSQL_USER_TABLE} WHERE username = '${req.body.username}';`,
-        (err, result) => {
+    db.prepare(`SELECT * FROM ${MYSQL_USER_TABLE} WHERE username = ?;`).get(
+        [req.body.username], (err, result) => {
             if (err) {
                 console.log("err1");
                 throw err;
@@ -114,9 +110,8 @@ router.post('/sign-in', (req, res, next) => {
                             }
                         );
 
-                        db.run(
-                            `UPDATE ${MYSQL_USER_TABLE} SET last_login = date('now') WHERE id = '${result.id}'`
-                        );
+                        db.prepare(`UPDATE ${MYSQL_USER_TABLE} SET last_login = ? WHERE id = ?`)
+                            .run([new Date().toLocaleString(), result.id]);
 
                         return res.status(200).send({
                             msg: `Welcome ${result.username}`,
