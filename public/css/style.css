@@ -35,9 +35,7 @@ html {
     font-size: 62.5%;
 }
 
-
 /*End of common styles*/
-
 
 /*top*/
 
@@ -77,9 +75,7 @@ html {
     background-color: var(--secondary-color);
 }
 
-
 /*End of top*/
-
 
 /*navbar*/
 
@@ -112,7 +108,6 @@ html {
     z-index: 100;
 }
 
-
 /*nav to top*/
 
 .to-top-arrow {
@@ -121,7 +116,6 @@ html {
     border-left: 0.6rem solid transparent;
     border-right: 0.6rem solid transparent;
 }
-
 
 /*end of nav to top*/
 
@@ -237,9 +231,7 @@ html {
     transition: bottom .5s, opacity .2s .25s;
 }
 
-
 /*End of navbar*/
-
 
 /*Header*/
 
@@ -374,9 +366,7 @@ html {
     }
 }
 
-
 /*End of header*/
-
 
 /*Popular tours*/
 
@@ -505,9 +495,7 @@ html {
     cursor: pointer;
 }
 
-
 /*End of popular tours*/
-
 
 /*Stories*/
 
@@ -605,9 +593,7 @@ html {
     text-shadow: 0 1rem 1rem #000;
 }
 
-
 /*End of Stories*/
-
 
 /*Contact*/
 
@@ -658,8 +644,7 @@ html {
     width: 48.5%;
 }
 
-.input-group input,
-.input-group textarea {
+.input-group input, .input-group textarea {
     padding: 3rem 1rem 1rem;
     background-color: var(--secondary-color);
     border: .1rem solid var(--secondary-color);
@@ -670,8 +655,7 @@ html {
     transition: border .3s;
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
+.input-group input:focus, .input-group textarea:focus {
     border: .1rem solid #ccc;
 }
 
@@ -729,9 +713,7 @@ html {
     }
 }
 
-
 /*End of Contact*/
-
 
 /*footer*/
 
@@ -768,7 +750,6 @@ html {
     letter-spacing: .2rem;
     margin-top: 1.5rem;
 }
-
 
 /*End of footer*/
 
@@ -811,6 +792,11 @@ html {
     }
     .story-bg {
         transform: skewX(0);
+        transition: 0.3s;
+    }
+    .story-bg:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 2rem 5rem rgba(51, 51, 51, .5);
     }
     .story {
         transform: skew(0);
