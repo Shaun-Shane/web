@@ -52,3 +52,28 @@
 
 
 /*booking*/
+
+@media (max-width: 800px) {
+    .booking-form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        margin: 0;
+    }
+    .booking-form {
+        padding: 2rem;
+        height: 55rem;
+    }
+    .booking-form img {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 45%;
+    }
+}
