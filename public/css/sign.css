@@ -1,4 +1,5 @@
 /*Sign in*/
+
 .sign {
     padding: 15rem 0 20rem 0;
     text-align: center;
@@ -97,4 +98,28 @@
     max-width: 100%;
     min-width: 100%;
 }
+
+
 /*End of Sign in*/
+
+@media (max-width: 800px) {
+    .sign-form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        margin: 0;
+    }
+    .sign-form {
+        padding: 2rem;
+        height: 50rem;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 45%;
+    }
+}
