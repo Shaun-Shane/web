@@ -33,6 +33,7 @@ html {
     margin: 0rem 3.5rem 0rem 3.5rem;
     box-shadow: 0.5rem 1rem 2rem var(--grey-color);
     overflow: hidden;
+    opacity: 0;
 }
 
 

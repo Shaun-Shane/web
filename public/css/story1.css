@@ -1,0 +1,78 @@
+/*Stories*/
+
+.story1 {
+    padding: 10rem 0;
+    position: relative;
+}
+
+.story1-image {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 5rem;
+}
+
+.story1-bgimage1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 52rem;
+    opacity: .4;
+}
+
+.story1-bgimage2 {
+    position: absolute;
+    top: 52rem;
+    width: 100%;
+    height: 100rem;
+    opacity: .4;
+}
+
+.story1-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story1-bg {
+    background-color: rgba(238, 238, 238, .85);
+    padding: 5rem;
+    margin: 5rem;
+    width: 70%;
+    box-shadow: 0 2rem 5rem rgba(51, 51, 51, .4);
+    transform: skewX(0deg);
+}
+
+.story1 {
+    transform: skewX(0deg);
+    display: flex;
+}
+
+.story1-headtext {
+    font-size: 5rem;
+    color: var(--black-color);
+}
+
+.story1-text {
+    letter-spacing: .1rem;
+}
+
+.story1-heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--grey-color);
+    margin-bottom: 1rem;
+}
+
+.story1-paragraph {
+    font-size: 1.8rem;
+    color: #6E6E6E;
+}
+
+.story1-paragraph::first-letter {
+    margin-left: 1rem;
+}
+
+
+/*End of Stories*/

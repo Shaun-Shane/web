@@ -1,0 +1,232 @@
+/*top*/
+
+.back-icon {
+    display: flex;
+    margin-left: 3rem;
+    position: fixed;
+}
+
+.back-link {
+    height: 3.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    color: var(--light-grey-color);
+    flex-direction: row;
+    margin: 1rem 2rem;
+    border: none;
+    padding: 0.6rem;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+    transition: background-color 0.8s;
+}
+
+.back-link:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/*End of top*/
+
+
+/*Header*/
+
+.fei_header {
+    width: 80%;
+    height: calc(100vh - 7rem);
+    background: rgba(255, 255, 255, .7);
+    background-size: absolute;
+    border-radius: 25% 0%;
+    perspective: 40rem;
+}
+
+.fei_header-text {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.fei_heading {
+    font-size: 8rem;
+    color: var(--black-color);
+}
+
+.fei_header-paragraph1 {
+    background: rgb(167, 188, 211);
+    color: rgb(0, 0, 0);
+    max-width: 70rem;
+    margin: 3rem;
+    transform: skew(-10deg);
+    padding: 3rem;
+    opacity: 0.8;
+}
+
+.fei_header-paragraph1-text {
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    transform: skew(10deg);
+}
+
+
+/*End of header*/
+
+
+/*Stories*/
+
+.setu {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    left: 15rem;
+    border-radius: 5%;
+}
+
+.fei_stories {
+    padding: 10rem 0;
+    position: relative;
+}
+
+.fei_video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+
+.fei_bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fei_stories-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fei_story-bg {
+    background-color: rgba(255, 255, 255, 0.979);
+    padding: 5rem;
+    margin: 5rem;
+    width: 80%;
+    box-shadow: 0 2rem 5rem rgba(51, 51, 51, .4);
+    border-radius: 10%;
+    opacity: .7;
+    perspective: 40rem;
+}
+
+.fei_story-image1 {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5rem;
+}
+
+.fei_story-image2 {
+    position: sticky;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5rem;
+}
+
+.fei_story {
+    display: flex;
+}
+
+.fei_story-text {
+    letter-spacing: .1rem;
+}
+
+.fei_story-heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--grey-color);
+    margin-bottom: 1rem;
+}
+
+.fei_story-paragraph {
+    font-size: 1.8rem;
+    color: var(--grey-color);
+}
+
+.fei_story-paragraph::first-letter {
+    margin-left: 1rem;
+}
+
+
+/*End of Stories*/
+
+.logo {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+}
+
+.logo h1 {
+    display: flex;
+}
+
+.logo h1 span {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: var(--white-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+}
+
+.logo h1 span:nth-child(1) {
+    animation: drop-letters 5s .1s infinite;
+}
+
+.logo h1 span:nth-child(2) {
+    animation: drop-letters 5s .2s infinite;
+}
+
+.logo h1 span:nth-child(3) {
+    animation: drop-letters 5s .3s infinite;
+}
+
+.logo h1 span:nth-child(4) {
+    animation: drop-letters 5s .5s infinite;
+}
+
+.logo h1 span:nth-child(5) {
+    animation: drop-letters 5s .5s infinite;
+}
+
+.logo h1 span:nth-child(6) {
+    animation: drop-letters 5s .6s infinite;
+}
+
+.logo h1 span:nth-child(7) {
+    animation: drop-letters 5s .7s infinite;
+}
+
+@keyframes drop-letters {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(-100%);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

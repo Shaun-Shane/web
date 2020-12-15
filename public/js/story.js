@@ -11,7 +11,8 @@ async function checkLogIn() {
     var userInfo = JSON.parse(localStorage.getItem('userInfo'));
     //userInfo.token = "invalid"; //for test, making token malformed
     if (userInfo) console.log(userInfo.token);
-    let res = await fetch('/story', {
+    //console.log(location.href);
+    let res = await fetch(location.href, {
         method: "GET",
         mode: "cors",
         redirect: "follow",
@@ -24,16 +25,10 @@ async function checkLogIn() {
         sessionInvalidAlert(result.msg); //session invalid
     } else { //user is logged in
         document.getElementById("user-account-btn").innerHTML = userInfo.user.username;
+        document.querySelector(".container").style.cssText = "opacity: 1.0";
     }
 }
 checkLogIn();
-
-Array.from(document.getElementsByName('sign-btn')).forEach(item => {
-    item.onclick = () => {
-        window.localStorage.setItem("sign-btn", location.href);
-        console.log(location.href);
-    }
-})
 
 Array.from(document.querySelectorAll(".footer-link")).forEach(item => {
     item.onclick = () => {
@@ -62,9 +57,11 @@ document.getElementById("log-out-btn").onclick = () => {
     location.href = '/'; //back to home page
 }
 
-$("a").click(function() {
-    $("html, body").animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 600);
-    return false;
-});
+$(window).load(function() {
+    $("a").click(function() {
+        $("html, body").animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 600);
+        return false;
+    });
+})
