@@ -85,6 +85,13 @@ Array.from(document.getElementsByName('sign-btn')).forEach(item => {
     }
 })
 
+document.querySelector(".form-btn").onclick = () => {
+    swal({
+        title: `Thanks for your message!`,
+        icon: "success",
+    })
+}
+
 function navToIndexFromOtherPage() {
     var tmp = localStorage.getItem("href#");
     console.log(tmp);

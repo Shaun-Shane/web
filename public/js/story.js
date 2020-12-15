@@ -30,6 +30,17 @@ async function checkLogIn() {
 }
 checkLogIn();
 
+Array.from(document.querySelectorAll(".story-bg")).forEach(item => {
+    if (item.parentElement.getAttribute("href") == "#TOP") {
+        item.onclick = () => {
+            swal({
+                title: `Story is constructing! Please wait for a while...`,
+                icon: "info",
+            })
+        }
+    }
+});
+
 Array.from(document.querySelectorAll(".footer-link")).forEach(item => {
     item.onclick = () => {
         var tmp = String(item.getAttribute("href"));

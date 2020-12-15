@@ -80,8 +80,8 @@ html {
 
 .back-icon {
     display: flex;
-    margin-left: 3rem;
-    position: fixed;
+    margin-left: 2.5rem;
+    position: absolute;
     cursor: pointer;
 }
 
