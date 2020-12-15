@@ -40,7 +40,7 @@ html {
 
 .top {
   height: 4.9rem;
-  box-shadow: 0 0.3rem 1rem var(--grey-color);
+  box-shadow: -1 0.3rem 1rem var(--grey-color);
   z-index: 200;
   background-color: var(--white-color);
   position: sticky;
@@ -279,12 +279,12 @@ html {
 }
 
 .logo h1 span {
-  font-size: 2rem;
+  font-size: 0.5rem;
   font-weight: 900;
   color: var(--primary-color);
   text-transform: uppercase;
   background-color: var(--white-color);
-  width: 3.5rem;
+  width: 0.5rem;
   height: 3.5rem;
   margin: 0.5rem;
   border-radius: 50%;
