@@ -47,6 +47,7 @@
 }
 
 .sign-input-group input,
+.sign-input-group div,
 .sign-input-group textarea {
     padding: 3rem 1rem 1rem;
     background-color: var(--secondary-color);
@@ -58,7 +59,13 @@
     transition: border .3s;
 }
 
+.sign-input-group div {
+    text-align: left;
+    cursor: pointer;
+}
+
 .sign-input-group input:focus,
+.sign-input-group div:hover,
 .sign-input-group textarea:focus {
     border: .1rem solid #ccc;
 }

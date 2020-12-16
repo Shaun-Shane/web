@@ -27,8 +27,7 @@ module.exports = {
         }
 
         // password (repeat) does not match
-        if (
-            !req.body.password_repeat ||
+        if (!req.body.password_repeat ||
             req.body.password != req.body.password_repeat
         ) {
             console.log('Both passwords must match');
@@ -47,10 +46,20 @@ module.exports = {
                 next();
                 return;
             }
+            if (JSON.stringify(req.url).includes("profile")) {
+                var arr = JSON.stringify(req.url).split('/');
+                var reqname = arr[arr.length - 1].split("\"")[0];
+                var username = JSON.parse(req.headers.authorization).user.username;
+                if (reqname != username) {
+                    return res.status(401).send({
+                        msg: 'You are now allowed to access this personal page!',
+                    });
+                }
+            }
             const token = JSON.parse(req.headers.authorization).token
             const decoded = jwt.verify(
-              token,
-              'SECRETKEY'
+                token,
+                'SECRETKEY'
             );
             req.userData = decoded;
             next();

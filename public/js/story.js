@@ -65,11 +65,20 @@ Array.from(document.querySelectorAll(".back-link")).forEach(item => {
     }
 });
 
-document.getElementById("log-out-btn").onclick = () => {
-    var userInfo = JSON.parse(localStorage.getItem('userInfo'));
-    userInfo.token = "invalid"; //making token malformed
-    localStorage.setItem('userInfo', JSON.stringify(userInfo));
-    location.href = '/'; //back to home page
+if (document.getElementById("user-account-btn")) {
+    document.getElementById("user-account-btn").onclick = () => {
+        var userInfo = JSON.parse(localStorage.getItem('userInfo'));
+        location.href = `/profile/${userInfo.user.username}`; //go to user profile
+    }
+}
+
+if (document.getElementById("log-out-btn")) {
+    document.getElementById("log-out-btn").onclick = () => {
+        var userInfo = JSON.parse(localStorage.getItem('userInfo'));
+        userInfo.token = "invalid"; //making token malformed
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+        location.href = '/'; //back to home page
+    }
 }
 
 $(window).load(function() {

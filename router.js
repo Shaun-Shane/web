@@ -54,6 +54,10 @@ router.get('/offer-detail', userMiddleware.isLoggedIn, (req, res, next) => {
     res.sendFile(__dirname + '/view/offer2.html');
 })
 
+router.get('/profile/*', userMiddleware.isLoggedIn, (req, res, next) => {
+    res.sendFile(__dirname + '/view/profile.html');
+})
+
 router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
     db.prepare(`SELECT * FROM ${MYSQL_USER_TABLE} WHERE LOWER(username) = LOWER(?);`)
         .get([req.body.username], (err, result) => {
@@ -150,5 +154,22 @@ router.post('/sign-in', (req, res, next) => {
         }
     );
 });
+
+router.post('/profile/*', (req, res, next) => {
+    db.prepare(`DELETE FROM ${MYSQL_USER_TABLE} WHERE username = ?;`).run(
+        [JSON.parse(req.headers.authorization).user.username], (err) => {
+            if (err) {
+                console.log("err1");
+                throw err;
+                return res.status(400).send({
+                    msg: err
+                });
+            }
+            return res.status(200).send({
+                msg: "deleted!"
+            })
+        }
+    );
+})
 
 module.exports = router;

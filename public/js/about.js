@@ -8,6 +8,10 @@ function changeTop(username) { //登陆后修改顶部
     userAccount.className = "sign-link";
     userAccount.id = "user-account-btn";
     userAccount.innerHTML = username;
+    userAccount.addEventListener('click', () => {
+        var userInfo = JSON.parse(localStorage.getItem('userInfo'));
+        location.href = `/profile/${userInfo.user.username}`; //go to user profile
+    })
     document.getElementById("sign-list").appendChild(userAccount);
 
     var logOut = document.createElement("div");
