@@ -42,6 +42,18 @@ router.get('/story/story-2', userMiddleware.isLoggedIn, (req, res, next) => {
     res.sendFile(__dirname + '/view/story-2.html')
 })
 
+router.get('/about', userMiddleware.isLoggedIn, (req, res, next) => {
+    res.sendFile(__dirname + '/view/about.html');
+})
+
+router.get('/offer', userMiddleware.isLoggedIn, (req, res, next) => {
+    res.sendFile(__dirname + '/view/offer.html');
+})
+
+router.get('/offer-detail', userMiddleware.isLoggedIn, (req, res, next) => {
+    res.sendFile(__dirname + '/view/offer2.html');
+})
+
 router.post('/sign-up', userMiddleware.validateRegister, (req, res, next) => {
     db.prepare(`SELECT * FROM ${MYSQL_USER_TABLE} WHERE LOWER(username) = LOWER(?);`)
         .get([req.body.username], (err, result) => {

@@ -44,6 +44,10 @@ Array.from(document.querySelectorAll(".story-bg")).forEach(item => {
 Array.from(document.querySelectorAll(".footer-link")).forEach(item => {
     item.onclick = () => {
         var tmp = String(item.getAttribute("href"));
+        if (!tmp.includes("#")) {
+            window.location.href = "/" + tmp;
+            return;
+        }
         window.localStorage.setItem("href#", tmp.split('#')[1]);
         console.log(tmp.split('#')[1]);
         console.log(window.localStorage.getItem("href#"));

@@ -254,6 +254,7 @@ html {
     padding: .3rem 3rem;
     letter-spacing: .3rem;
     transition: all .2s;
+    cursor: pointer;
 }
 
 .footer-link:hover {
