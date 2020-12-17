@@ -3,6 +3,7 @@ function sessionInvalidAlert(msg) {
         title: `${msg}`,
         icon: "error",
     }).then(function() {
+        localStorage.setItem("href#", "Tours");
         location.href = '/';
     })
 }
@@ -32,9 +33,8 @@ checkLogIn();
 
 if (document.getElementById("Back")) {
     document.getElementById("Back").addEventListener('click', () => {
-        var url = window.localStorage.getItem("sign-btn");
-        console.log(url);
-        location.href = url;
+        localStorage.setItem("href#", "Tours");
+        location.href = '/';
         //window.history.back();
     })
 }
