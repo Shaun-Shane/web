@@ -44,4 +44,4 @@
   | 庞鹏瞩 |                             |   100%   |
 
 ## 使用说明
-``https://github.com/Shaun-Shane/web.git && cd web && npm run devStart``
+``git clone https://github.com/Shaun-Shane/web.git && cd web && npm run devStart``
