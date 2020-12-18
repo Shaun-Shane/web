@@ -1,4 +1,5 @@
 /*Sign in*/
+
 .sign {
     padding: 15rem 0 20rem 0;
     text-align: center;
@@ -46,6 +47,7 @@
 }
 
 .sign-input-group input,
+.sign-input-group div,
 .sign-input-group textarea {
     padding: 3rem 1rem 1rem;
     background-color: var(--secondary-color);
@@ -57,7 +59,13 @@
     transition: border .3s;
 }
 
+.sign-input-group div {
+    text-align: left;
+    cursor: pointer;
+}
+
 .sign-input-group input:focus,
+.sign-input-group div:hover,
 .sign-input-group textarea:focus {
     border: .1rem solid #ccc;
 }
@@ -97,4 +105,28 @@
     max-width: 100%;
     min-width: 100%;
 }
+
+
 /*End of Sign in*/
+
+@media (max-width: 800px) {
+    .sign-form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        margin: 0;
+    }
+    .sign-form {
+        padding: 2rem;
+        height: 50rem;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 45%;
+    }
+}

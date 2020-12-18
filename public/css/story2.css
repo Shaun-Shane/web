@@ -1,8 +1,10 @@
 /*top*/
+
 .back-icon {
     display: flex;
-    margin-left: 3rem;
-    position: fixed;
+    margin-left: 2.5rem;
+    position: absolute;
+    cursor: pointer;
 }
 
 .back-link {
@@ -24,14 +26,16 @@
     background-color: var(--secondary-color);
 }
 
+
 /*End of top*/
+
 
 /*Header*/
 
 .fei_header {
     width: 80%;
     height: calc(100vh - 7rem);
-    background:  rgba(255, 255, 255, .7);
+    background: rgba(255, 255, 255, .7);
     background-size: absolute;
     border-radius: 25% 0%;
     perspective: 40rem;
@@ -63,9 +67,13 @@
     font-size: 1rem;
     transform: skew(10deg);
 }
+
+
 /*End of header*/
 
+
 /*Stories*/
+
 .setu {
     position: relative;
     max-width: 100%;
@@ -112,7 +120,7 @@
 }
 
 .fei_story-image1 {
-    position:relative;
+    position: relative;
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
@@ -153,4 +161,73 @@
     margin-left: 1rem;
 }
 
+
 /*End of Stories*/
+
+.logo {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+}
+
+.logo h1 {
+    display: flex;
+}
+
+.logo h1 span {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    background-color: var(--white-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+}
+
+.logo h1 span:nth-child(1) {
+    animation: drop-letters 5s .1s infinite;
+}
+
+.logo h1 span:nth-child(2) {
+    animation: drop-letters 5s .2s infinite;
+}
+
+.logo h1 span:nth-child(3) {
+    animation: drop-letters 5s .3s infinite;
+}
+
+.logo h1 span:nth-child(4) {
+    animation: drop-letters 5s .5s infinite;
+}
+
+.logo h1 span:nth-child(5) {
+    animation: drop-letters 5s .5s infinite;
+}
+
+.logo h1 span:nth-child(6) {
+    animation: drop-letters 5s .6s infinite;
+}
+
+.logo h1 span:nth-child(7) {
+    animation: drop-letters 5s .7s infinite;
+}
+
+@keyframes drop-letters {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(-100%);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -10,10 +10,6 @@
     outline: none;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 :root {
     --primary-color: #2b81e4;
     --secondary-color: #eee;
@@ -35,7 +31,13 @@ html {
     overflow: hidden;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+
 /*End of common styles*/
+
 
 /*top*/
 
@@ -68,13 +70,16 @@ html {
     text-transform: uppercase;
     border-radius: 1.5rem;
     transition: background-color 0.8s;
+    cursor: pointer;
 }
 
 .sign-link:hover {
     background-color: var(--secondary-color);
 }
 
+
 /*End of top*/
+
 
 /*navbar*/
 
@@ -107,6 +112,7 @@ html {
     z-index: 100;
 }
 
+
 /*nav to top*/
 
 .to-top-arrow {
@@ -115,6 +121,7 @@ html {
     border-left: 0.6rem solid transparent;
     border-right: 0.6rem solid transparent;
 }
+
 
 /*end of nav to top*/
 
@@ -230,7 +237,9 @@ html {
     transition: bottom .5s, opacity .2s .25s;
 }
 
+
 /*End of navbar*/
+
 
 /*Header*/
 
@@ -365,7 +374,9 @@ html {
     }
 }
 
+
 /*End of header*/
+
 
 /*Popular tours*/
 
@@ -494,7 +505,9 @@ html {
     cursor: pointer;
 }
 
+
 /*End of popular tours*/
+
 
 /*Stories*/
 
@@ -533,8 +546,9 @@ html {
     transform: skewX(20deg);
     transition: 0.3s;
 }
-.story-bg:hover{
-    transform: translate(-10px,-20px) skewX(20deg);
+
+.story-bg:hover {
+    transform: translate(-10px, -20px) skewX(20deg);
     box-shadow: 0 2rem 5rem rgba(51, 51, 51, .5);
 }
 
@@ -578,12 +592,22 @@ html {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5rem;
-    color: var(--white-color);
     text-shadow: 0 1rem 2rem #000;
     margin-top: 3rem;
+    transition: text-shadow .5s;
 }
 
+.story-link a {
+    color: var(--white-color);
+}
+
+.story-link:hover {
+    text-shadow: 0 1rem 1rem #000;
+}
+
+
 /*End of Stories*/
+
 
 /*Contact*/
 
@@ -634,7 +658,8 @@ html {
     width: 48.5%;
 }
 
-.input-group input, .input-group textarea {
+.input-group input,
+.input-group textarea {
     padding: 3rem 1rem 1rem;
     background-color: var(--secondary-color);
     border: .1rem solid var(--secondary-color);
@@ -645,7 +670,8 @@ html {
     transition: border .3s;
 }
 
-.input-group input:focus, .input-group textarea:focus {
+.input-group input:focus,
+.input-group textarea:focus {
     border: .1rem solid #ccc;
 }
 
@@ -703,7 +729,9 @@ html {
     }
 }
 
+
 /*End of Contact*/
+
 
 /*footer*/
 
@@ -741,6 +769,7 @@ html {
     margin-top: 1.5rem;
 }
 
+
 /*End of footer*/
 
 @media (max-width: 1200px) {
@@ -774,14 +803,22 @@ html {
     .heading {
         font-size: 6rem;
     }
-    .header-paragraph {
+    .header-paragraph1 {
         font-size: 2.5rem;
+    }
+    .header-paragraph2 {
+        font-size: 1.8rem;
     }
     .popular-tours-heading {
         font-size: 6rem;
     }
     .story-bg {
         transform: skewX(0);
+        transition: 0.3s;
+    }
+    .story-bg:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 2rem 5rem rgba(51, 51, 51, .5);
     }
     .story {
         transform: skew(0);
@@ -797,8 +834,14 @@ html {
     }
 }
 
+@media (max-width: 940px) {
+    .header-paragraph2 {
+        display: none;
+    }
+}
+
 @media (max-width: 800px) {
-    .header-paragraph {
+    .header-paragraph1 {
         display: none;
     }
     .popular-tours-heading {
@@ -820,15 +863,23 @@ html {
     .container {
         margin: 0;
     }
-    .open-navbar-icon {
-        top: 2.5rem;
-        left: 2.5rem;
-    }
     .navbar-wrapper {
         padding: 0;
     }
     .close-navbar-icon {
-        right: 4rem;
+        right: 2rem;
+    }
+    .open-navbar-icon {
+        left: 1.5rem;
+    }
+    .nav-to-top-icon {
+        right: 1.0rem;
+    }
+    .sign-list {
+        margin-right: 0rem;
+    }
+    .sign-link {
+        margin: 1rem 1rem;
     }
     .header {
         height: 100vh;
