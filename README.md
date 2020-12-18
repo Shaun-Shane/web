@@ -24,8 +24,6 @@
 
 - 项目地址： <https://github.com/Shaun-Shane/web>
 
-- 项目进度时间线
-  - 2020-10-15
 
 ## 项目开发文档
 
@@ -45,15 +43,5 @@
   | 何雨浓 |                             |   100%   |
   | 庞鹏瞩 |                             |   100%   |
 
-- 待实现内容
-  - [ ] The most Popular Tours 中的三个 Tour 各做一个 .html页面 包含详细描述
-  - [ ] 第三各板块的两个 stories 各做一个 .html页面 包含详细描述（需要头像 动态背景 类似的字体 paragraph可通过lorem随机生成）
-  - [ ] About Us
-  - [ ] Offer
-  - [ ] database 数据处理
-
-- 项目的技术难点
-  - 难点...
-
-- 项目运行截图
-  - 截图...
+## 使用说明
+``https://github.com/Shaun-Shane/web.git && cd web && npm run devStart``
